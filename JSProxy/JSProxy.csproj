@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Company>Dmitry Nogin</Company>
+    <Description>Code emitter to generate JScript calls.
+</Description>
+    <Copyright>(c) Dmitry Nogin</Copyright>
+    <PackageLicenseFile>README.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/dmitrynogin/jsproxy</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/dmitrynogin/jsproxy.git</RepositoryUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
