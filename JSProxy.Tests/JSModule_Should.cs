@@ -1,6 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Moq;
 using System;
+using DescriptionAttribute = System.ComponentModel.DescriptionAttribute;
 
 namespace JSProxy.Tests
 {
@@ -15,10 +15,10 @@ namespace JSProxy.Tests
         }
     }
 
-    [JSModule("testCases")]
+    [Description("testCases")]
     public interface ITestCases : IDisposable
     {
-        [JSFunc("echoSimpleParameters")]
+        [Description("echoSimpleParameters")]
         string Echo(string param0, int param1);
     }
 }

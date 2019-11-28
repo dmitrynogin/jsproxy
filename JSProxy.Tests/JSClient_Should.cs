@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
+using DescriptionAttribute = System.ComponentModel.DescriptionAttribute;
 
 namespace JSProxy.Tests
 {
@@ -25,10 +26,10 @@ namespace JSProxy.Tests
         }
     }
 
-    [JSModule("greeter")]
+    [Description("greeter")]
     public interface IGreeter : IDisposable
     {
-        [JSFunc("hello")]
+        [Description("hello")]
         string Hello(string name);
     }
 }
