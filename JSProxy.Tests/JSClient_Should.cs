@@ -1,6 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
 using System;
+using System.Threading;
 using DescriptionAttribute = System.ComponentModel.DescriptionAttribute;
 
 namespace JSProxy.Tests
@@ -13,7 +14,7 @@ namespace JSProxy.Tests
         {
             var module = new Mock<IJSModule>();
             module
-                .Setup(m => m.Execute("hello('World')"))
+                .Setup(m => m.Execute("hello", new object[] { "World" }, CancellationToken.None))
                 .Returns("Hello, World!");
 
             IJSModule load(string name) =>

@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace JSProxy
 {
     public interface IJSModule : IDisposable
     {
-        string Execute(string call);
-        Task<string> ExecuteAsync(string call);
+        object Execute(string func, object[] args, CancellationToken cancellationToken);
+        Task<object> ExecuteAsync(string func, object[] args, CancellationToken cancellationToken);
     }
 }
